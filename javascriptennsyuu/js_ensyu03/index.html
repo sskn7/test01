@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=“ja”>
+<head>
+<meta charset="UTF
+8">
+<title>
+  03_【演習】関数
+</title>
+</head>
+<body>
+<h4>■■■問1■■■</h4>
+<script>
+  function menseki(hankei) {
+    return "半径" + hankei + "センチの円の面積は" + hankei*hankei*3.14 + "平方センチメートルです！！<br>";
+  }
+
+  document.write(menseki(5));
+  document.write(menseki(7));
+  document.write(menseki(10));
+</script>
+
+<h4>■■■問2■■■</h4>
+<script>
+  function price (adult,child,adultp=500,childp=200) {    
+    //引数は順番に戻り値に入力されていく。document.writeのところで想定外の入力をされた場合、
+    //想定外の結果になってしまうことを考えると、returnのところで数字を入力させておくということもできる
+    return (adultp*adult)+(childp*child)+"ドルです。";
+  }
+  function heijitsu(otona, kodomo) {
+    return price(otona, kodomo);
+  }
+  function kyujitsu(otona, kodomo) {
+    let warimashi = 100;
+    return price(otona, kodomo, 500+warimashi, 200+warimashi);
+  }
+
+  //できることすべてを関数に入れた場合
+  function hyouji(group, otona, kodomo) {
+    return group + "グループの合計金額は" + price(otona, kodomo) + "<br>";
+  }
+
+
+  document.write("Aグループの合計金額は");
+  document.write(price(2,4));
+  document.write("<br>");
+  document.write("Bグループの合計金額は");
+  document.write(price(1,5));
+  document.write("<br>");
+  document.write("Cグループの合計金額は");
+  document.write(price(3,7));
+  document.write("<br>");
+  //できることすべてを関数に入れた場合
+  document.write(hyouji("D", 100, 100));
+</script>
+
+
+
+</body>
+</html>
