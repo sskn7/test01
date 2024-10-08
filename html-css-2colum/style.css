@@ -40,16 +40,16 @@ main {
 
 .left {
   float: left;
-  background-color: lightblue;
-  width: 70%;
+  background-color: lightgreen;
+  width: 50%;
   height: 500px;
   margin-bottom: 40px;
 }
 
 .right {
   float: right;
-  background-color: lightskyblue;
-  width: 30%;
+  background-color: greenyellow;
+  width: 50%;
   height: 500px;
   margin-bottom: 40px;
 } 
